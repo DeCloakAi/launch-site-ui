@@ -252,14 +252,9 @@ const LandingPage = () => {
         <header className="bg-card shadow-sm border-b border-border">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-[#0A2540] dark:bg-[#00D09C] rounded-lg flex items-center justify-center">
-                  <Shield className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <span className="text-2xl font-semibold text-[#0A2540] dark:text-white">decloak</span>
-                  <span className="text-2xl font-normal text-muted-foreground">.ai</span>
-                </div>
+              <div className="flex items-center">
+                <img src="/logo-light.svg" alt="Decloak.ai" className="h-10 block dark:hidden" />
+                <img src="/logo-dark.svg" alt="Decloak.ai" className="h-10 hidden dark:block" />
               </div>
               <div className="flex items-center space-x-4">
                 <Badge variant="secondary" className="bg-[#00D09C] text-white hover:bg-[#00D09C]/90">
@@ -440,14 +435,8 @@ const LandingPage = () => {
         {/* Footer */}
         <footer className="bg-[#0A2540] text-white py-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto text-center">
-            <div className="flex items-center justify-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-[#00D09C] rounded-lg flex items-center justify-center">
-                <Shield className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <span className="text-2xl font-semibold">decloak</span>
-                <span className="text-2xl font-normal text-gray-300">.ai</span>
-              </div>
+            <div className="flex items-center justify-center mb-4">
+              <img src="/logo-dark.svg" alt="Decloak.ai" className="h-10" />
             </div>
             <p className="text-gray-300 mb-6">
               AI-Powered Privacy Control

@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Decloak UI (Next.js)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a Next.js-based UI for the Decloak platform. Tailwind CSS provides styling and a small collection of Shadcn components.
 
-## Available Scripts
+## Development
 
-In the project directory, you can run:
+```bash
+npm run dev
+```
 
-### `npm start`
+The app will be available at `http://localhost:3000`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Production build
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+npm run build
+npm start
+```
 
-### `npm test`
+These commands create an optimized build and start the production server.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Environment variables
 
-### `npm run build`
+Create a `.env` file with the following variables:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+NEXT_PUBLIC_BACKEND_URL=<backend api url>
+NEXT_PUBLIC_ADMIN_PASSWORD=<password for the admin login>
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Deploying to Vercel
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This project works out-of-the-box with Vercel's Next.js runtime. To deploy:
 
-### `npm run eject`
+1. Ensure Node.js 20 is used (see `.nvmrc`).
+2. Add the environment variables above in your Vercel project settings.
+3. Connect this repository to Vercel; the default build (`yarn build`) will run automatically.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Your application will be available at the generated Vercel URL once the build completes.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -10,7 +10,7 @@ import { trackSignup, trackEvent } from '../components/GoogleAnalytics';
 import CountdownTimer from '../components/CountdownTimer';
 import axios from 'axios';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
 const StickyCountdown = () => {
@@ -457,13 +457,13 @@ const LandingPage = () => {
                 Admin Dashboard
               </a>
               <span className="text-gray-600">|</span>
-              <span className="text-gray-400 text-sm">
+              <a href="/privacy" className="text-gray-400 hover:text-white text-sm">
                 Privacy Policy
-              </span>
+              </a>
               <span className="text-gray-600">|</span>
-              <span className="text-gray-400 text-sm">
+              <a href="/terms" className="text-gray-400 hover:text-white text-sm">
                 Terms of Service
-              </span>
+              </a>
             </div>
             <p className="text-gray-400 text-sm">
               © 2025 Decloak.ai. Your privacy is our priority.

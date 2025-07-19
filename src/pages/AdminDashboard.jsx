@@ -275,9 +275,6 @@ const AdminDashboard = () => {
               <p className="text-muted-foreground">Manage Decloak.ai early access program</p>
             </div>
             <div className="flex items-center space-x-4">
-              <a href="/" className="text-[#00D09C] hover:text-[#00D09C]/80">
-                ← Back to Site
-              </a>
               <Button
                 variant="ghost"
                 size="icon"
@@ -506,7 +503,6 @@ const AdminDashboard = () => {
                       paginationPageSize={20}
                       rowSelection="multiple"
                       animateRows={true}
-                      enableRangeSelection={true}
                       suppressRowClickSelection={true}
                     />
                   </div>

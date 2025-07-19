@@ -442,10 +442,6 @@ const LandingPage = () => {
               AI-Powered Privacy Control
             </p>
             <div className="flex justify-center space-x-6 mb-6">
-              <a href="/admin" className="text-gray-400 hover:text-white text-sm">
-                Admin Dashboard
-              </a>
-              <span className="text-gray-600">|</span>
               <a href="/privacy" className="text-gray-400 hover:text-white text-sm">
                 Privacy Policy
               </a>

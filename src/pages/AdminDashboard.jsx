@@ -29,9 +29,12 @@ import {
 import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-quartz.css';
+import { ModuleRegistry, AllCommunityModule } from 'ag-grid-community';
 import { useTheme } from '../hooks/useTheme';
 import { toast } from '../hooks/use-toast';
 import axios from 'axios';
+
+ModuleRegistry.registerModules([AllCommunityModule]);
 
 const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;

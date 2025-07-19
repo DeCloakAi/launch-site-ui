@@ -2,8 +2,7 @@ import { useEffect } from 'react';
 
 const GoogleAnalytics = () => {
   useEffect(() => {
-    // Google Analytics tracking ID (dummy for now)
-    const GA_TRACKING_ID = 'G-XXXXXXXXXX';
+    const GA_TRACKING_ID = 'G-RPG7XFZ4V9';
 
     // Create script tag for gtag
     const script1 = document.createElement('script');

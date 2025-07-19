@@ -126,6 +126,11 @@ const LandingPage = () => {
   const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
   const handleEmailSubmit = async (e) => {
     e.preventDefault();
@@ -175,7 +180,7 @@ const LandingPage = () => {
       setIsLoading(false);
     }
   };
-
+  if (!hasMounted) return null;
   const keyFeatures = [
     {
       icon: <Search className="w-6 h-6" />,

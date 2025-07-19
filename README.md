@@ -28,3 +28,13 @@ NEXT_PUBLIC_BACKEND_URL=<backend api url>
 NEXT_PUBLIC_ADMIN_PASSWORD=<password for the admin login>
 ```
 
+## Deploying to Vercel
+
+This project works out-of-the-box with Vercel's Next.js runtime. To deploy:
+
+1. Ensure Node.js 20 is used (see `.nvmrc`).
+2. Add the environment variables above in your Vercel project settings.
+3. Connect this repository to Vercel; the default build (`yarn build`) will run automatically.
+
+Your application will be available at the generated Vercel URL once the build completes.
+

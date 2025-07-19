@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useTheme } from '../src/hooks/useTheme';
 import { Input } from '../src/components/ui/input';
@@ -21,11 +22,20 @@ export default function LoginPage() {
     }
   };
   return (
-    <div className={`min-h-screen ${theme === 'dark' ? 'dark' : ''}`}>
-      <div className="min-h-screen flex items-center justify-center bg-background transition-colors duration-300 p-4">
-        <form onSubmit={handleSubmit} className="bg-card p-6 rounded-lg shadow w-full max-w-sm space-y-4">
-          <div className="flex justify-between items-center">
-            <h1 className="text-lg font-semibold text-foreground">Admin Login</h1>
+    <>
+      <Head>
+        <title>Admin Login - Decloak.ai</title>
+        <meta
+          name="description"
+          content="Secure administrator login for Decloak.ai"
+        />
+        <meta name="keywords" content="decloak admin login" />
+      </Head>
+      <div className={`min-h-screen ${theme === 'dark' ? 'dark' : ''}`}>
+        <div className="min-h-screen flex items-center justify-center bg-background transition-colors duration-300 p-4">
+          <form onSubmit={handleSubmit} className="bg-card p-6 rounded-lg shadow w-full max-w-sm space-y-4">
+            <div className="flex justify-between items-center">
+              <h1 className="text-lg font-semibold text-foreground">Admin Login</h1>
             <Button type="button" variant="ghost" size="icon" onClick={toggleTheme} className="w-9 h-9">
               {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </Button>
@@ -33,7 +43,8 @@ export default function LoginPage() {
           <Input type="password" placeholder="Password" value={password} onChange={(e)=>setPassword(e.target.value)} />
           <Button type="submit" className="w-full">Login</Button>
         </form>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

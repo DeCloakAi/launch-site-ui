@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
 
@@ -18,5 +19,17 @@ export default function AdminPage() {
   }, [router]);
 
   if (!allowed) return null;
-  return <AdminDashboard />;
+  return (
+    <>
+      <Head>
+        <title>Admin Dashboard - Decloak.ai</title>
+        <meta
+          name="description"
+          content="Administrative dashboard for managing Decloak.ai"
+        />
+        <meta name="keywords" content="decloak admin dashboard" />
+      </Head>
+      <AdminDashboard />
+    </>
+  );
 }

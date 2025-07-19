@@ -2,17 +2,19 @@ import { useState, useEffect } from 'react';
 
 export const useTheme = () => {
   const [theme, setTheme] = useState(() => {
-    // Check if there's a saved theme in localStorage
-    const savedTheme = localStorage.getItem('decloak-theme');
-    if (savedTheme) {
-      return savedTheme;
+    if (typeof window !== 'undefined') {
+      // Check if there's a saved theme in localStorage
+      const savedTheme = window.localStorage.getItem('decloak-theme');
+      if (savedTheme) {
+        return savedTheme;
+      }
+
+      // Check system preference
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return 'dark';
+      }
     }
-    
-    // Check system preference
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark';
-    }
-    
+
     return 'light';
   });
 

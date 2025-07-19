@@ -27,7 +27,6 @@ import {
   Database
 } from 'lucide-react';
 import { AgGridReact } from 'ag-grid-react';
-import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-quartz.css';
 import { ModuleRegistry, AllCommunityModule } from 'ag-grid-community';
 import { useTheme } from '../hooks/useTheme';
@@ -503,7 +502,6 @@ const AdminDashboard = () => {
                       paginationPageSize={20}
                       rowSelection="multiple"
                       animateRows={true}
-                      suppressRowClickSelection={true}
                     />
                   </div>
                 </CardContent>

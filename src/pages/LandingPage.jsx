@@ -9,6 +9,7 @@ import { useTheme } from '../hooks/useTheme';
 import { trackSignup, trackEvent } from '../components/GoogleAnalytics';
 import CountdownTimer from '../components/CountdownTimer';
 import axios from 'axios';
+import { isDisposableEmail } from '../lib/emailUtils';
 
 const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
@@ -138,6 +139,15 @@ const LandingPage = () => {
       toast({
         title: "Email Required",
         description: "Please enter your email address to request access.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (await isDisposableEmail(email)) {
+      toast({
+        title: "Temporary Email Detected",
+        description: "Please use a permanent email address to request access.",
         variant: "destructive",
       });
       return;
